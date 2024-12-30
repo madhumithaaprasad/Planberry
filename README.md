@@ -28,4 +28,5 @@ A simple web-based To-Do application that allows users to add, organize, edit, a
 
 ## Screenshots
 ![image](https://github.com/user-attachments/assets/aebcca82-f05e-429d-95cf-9557d32f70f5)
+![image](https://github.com/user-attachments/assets/87cb9e1c-905a-47ac-84ba-4c145eab1988)
 

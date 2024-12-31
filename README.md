@@ -17,13 +17,7 @@ A simple and elegant web-based To-Do application that allows users to manage tas
 - `to-do-styles.css`: Provides the styling for the app, including fonts and colors that match the theme.
 - `to-do-script.js`: Implements the functionality and interactivity of the app.
 
-## How to Use
 
-1. **Download or Clone the Repository:**
-   Download the project files or clone the repository to your local machine.
-
-   ```bash
-   git clone <repository_url>
    ![image](https://github.com/user-attachments/assets/bbfcb6d0-9b36-43b6-829f-06baa4d98d95)
 
    

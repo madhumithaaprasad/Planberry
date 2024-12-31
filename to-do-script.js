@@ -1,26 +1,27 @@
-// Selecting DOM Elements
+
 const taskInput = document.getElementById('task-input');
+const taskDatetime = document.getElementById('task-datetime');
 const addTaskBtn = document.getElementById('add-task-btn');
 const taskList = document.getElementById('task-list');
 
-// Event Listeners
 addTaskBtn.addEventListener('click', addTask);
 taskList.addEventListener('click', handleTaskActions);
 
-// Functions
 function addTask() {
   const taskText = taskInput.value.trim();
+  const taskDateTime = taskDatetime.value;
 
-  if (taskText === '') {
-    alert('Please enter a task.');
+  if (taskText === '' || taskDateTime === '') {
+    alert('Please enter a task and select a date and time.');
     return;
   }
 
-  // Create Task Item
   const taskItem = document.createElement('li');
   taskItem.innerHTML = `
-    <span>${taskText}</span>
+    <span class="task-text">${taskText}</span>
+    <span class="datetime">${new Date(taskDateTime).toLocaleString()}</span>
     <div>
+      <button class="complete-btn">Mark Completed</button>
       <button class="edit-btn">Edit</button>
       <button class="delete-btn">Delete</button>
     </div>
@@ -28,20 +29,35 @@ function addTask() {
 
   taskList.appendChild(taskItem);
   taskInput.value = '';
+  taskDatetime.value = '';
 }
 
 function handleTaskActions(e) {
-  if (e.target.classList.contains('delete-btn')) {
-    // Delete Task
-    e.target.closest('li').remove();
-  } else if (e.target.classList.contains('edit-btn')) {
-    // Edit Task
-    const taskItem = e.target.closest('li');
-    const taskText = taskItem.querySelector('span');
-    const newText = prompt('Edit your task:', taskText.textContent);
+  const taskItem = e.target.closest('li');
 
-    if (newText !== null) {
-      taskText.textContent = newText.trim();
-    }
+  if (e.target.classList.contains('delete-btn')) {
+    
+    taskItem.remove();
+  } else if (e.target.classList.contains('edit-btn')) {
+    
+    const taskText = taskItem.querySelector('span.task-text');
+    const taskDateTime = taskItem.querySelector('.datetime');
+    const newTaskText = prompt('Edit your task:', taskText.textContent);
+    const newTaskDateTime = prompt(
+      'Edit your task date and time:',
+      taskDateTime.textContent
+    );
+
+    if (newTaskText !== null) taskText.textContent = newTaskText.trim();
+    if (newTaskDateTime !== null)
+      taskDateTime.textContent = new Date(newTaskDateTime).toLocaleString();
+  } else if (e.target.classList.contains('complete-btn')) {
+    
+    taskItem.classList.toggle('completed');
+    e.target.textContent = taskItem.classList.contains('completed')
+      ? 'Completed'
+      : 'Mark Completed';
   }
 }
+
+

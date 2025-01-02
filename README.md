@@ -17,6 +17,12 @@ A simple and elegant web-based To-Do application that allows users to manage tas
 - `to-do-styles.css`: Provides the styling for the app, including fonts and colors that match the theme.
 - `to-do-script.js`: Implements the functionality and interactivity of the app.
 
+**How to View**
+1. Download or clone this repository:
+   ```bash
+   git clone https://github.com/madhumithaaprasad/SCT_WD_4.git
+   ```
+2. Open the `index.html` file in any browser to view the page.
 
 ![image](https://github.com/user-attachments/assets/8e994405-0c29-42c2-9622-43c6cecd1a8e)
 

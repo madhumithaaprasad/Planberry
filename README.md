@@ -18,7 +18,8 @@ A simple and elegant web-based To-Do application that allows users to manage tas
 - `to-do-script.js`: Implements the functionality and interactivity of the app.
 
 
-   ![image](https://github.com/user-attachments/assets/bbfcb6d0-9b36-43b6-829f-06baa4d98d95)
+![image](https://github.com/user-attachments/assets/8e994405-0c29-42c2-9622-43c6cecd1a8e)
+
 
    
 

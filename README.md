@@ -1,6 +1,6 @@
-# To-Do Web App
+# Planberry
 
-A simple and elegant web-based To-Do application that allows users to manage tasks effectively. This project is built using HTML, CSS, and JavaScript and features a clean, user-friendly interface with a beautiful design theme.
+Planberry is a simple and elegant web-based To-Do application that allows users to manage tasks effectively. This project is built using HTML, CSS, and JavaScript and features a clean, user-friendly interface with a beautiful design theme.
 
 ## Features
 
